@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S & S - Our Story</title>
-  <!-- Romantic Fonts from Google Fonts -->
+  <!-- Google Fonts for typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
   <style>
-    /* Global Reset & Base Theme */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,12 +19,12 @@
     body {
       background-color: #080203;
       color: #fce8e8;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
 
-    /* Fixed Navigation Header */
+    /* Fixed Header Navigation */
     header {
       position: fixed;
       top: 0;
@@ -33,29 +32,33 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 40px;
+      padding: 25px 50px;
       z-index: 100;
-      background: linear-gradient(180deg, rgba(10, 2, 4, 0.9) 0%, rgba(10, 2, 4, 0) 100%);
+      background: linear-gradient(180deg, rgba(8, 2, 3, 0.8) 0%, rgba(8, 2, 3, 0) 100%);
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #ff3366;
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
       letter-spacing: 2px;
+      color: #e5c192;
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
+    .logo span {
+      color: #e61938;
+      font-size: 1.1rem;
+    }
+
     nav {
       display: flex;
-      gap: 25px;
+      gap: 30px;
     }
 
     nav a {
-      color: #d1b8b8;
+      color: #d1c2c2;
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 300;
@@ -68,232 +71,265 @@
     }
 
     .music-btn {
-      background: rgba(255, 51, 102, 0.15);
-      border: 1px solid rgba(255, 51, 102, 0.4);
-      color: #ff3366;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       transition: all 0.3s;
     }
 
     .music-btn:hover {
-      background: #ff3366;
-      color: #fff;
-      box-shadow: 0 0 12px rgba(255, 51, 102, 0.6);
+      border-color: #ff3366;
+      color: #ff3366;
     }
 
-    /* Common Section Styles */
-    section {
+    /* Landing Section */
+    #landing {
       min-height: 100vh;
       width: 100%;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 80px 20px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* Styling Buttons */
-    .btn-primary {
-      background: linear-gradient(45deg, #a80f2d, #ff3366);
-      color: #ffffff;
-      border: none;
-      padding: 12px 32px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(255, 51, 102, 0.4);
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(255, 51, 102, 0.7);
-    }
-
-    .scroll-hint {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      color: #a88;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      text-decoration: none;
-    }
-
-    /* --- SECTION 1: LANDING PAGE --- */
-    #landing {
-      background: radial-gradient(circle at top, #1e050b 0%, #080203 70%);
+      justify-content: flex-start;
+      padding-top: 100px;
       text-align: center;
+      /* Glowing night background */
+      background: radial-gradient(circle at 50% 15%, #3d0c18 0%, #080203 65%);
     }
 
-    .moon-container {
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle, #fffdfa 40%, #edd8a4 70%, rgba(237, 216, 164, 0) 100%);
+    /* Moon Graphic */
+    .moon {
+      width: 110px;
+      height: 110px;
+      background: radial-gradient(circle, #fffef0 20%, #f3deaa 70%, #d8b775 100%);
       border-radius: 50%;
-      box-shadow: 0 0 50px rgba(255, 235, 180, 0.5);
+      box-shadow: 0 0 40px rgba(243, 222, 170, 0.6), 0 0 80px rgba(243, 222, 170, 0.2);
       margin-bottom: 25px;
     }
 
+    /* Title Styling */
     .landing-title {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
       font-weight: 400;
-      margin-bottom: 12px;
-      color: #fff;
+      line-height: 1.5;
+      color: #ffffff;
+      margin-bottom: 15px;
     }
 
-    .landing-title span {
-      font-family: 'Great Vibes', cursive;
-      color: #ff3366;
-      font-size: 3rem;
+    .landing-title .highlight-red {
+      color: #e61938;
     }
 
+    .landing-title .cursive-title {
+      font-family: 'Alex Brush', cursive;
+      color: #e61938;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    .title-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0;
+      color: #d8b775;
+      font-size: 0.8rem;
+    }
+
+    .title-divider::before,
+    .title-divider::after {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d8b775, transparent);
+    }
+
+    /* Days Badge */
     .days-badge {
-      border-top: 1px solid rgba(255, 51, 102, 0.3);
-      border-bottom: 1px solid rgba(255, 51, 102, 0.3);
-      padding: 6px 16px;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      color: #c9a3a8;
+      text-transform: uppercase;
+      margin-top: 5px;
+      margin-bottom: 8px;
+    }
+
+    /* Gold Cursive Subheading */
+    .anniversary-text {
+      font-family: 'Alex Brush', cursive;
+      font-size: 2.8rem;
+      color: #f7d794;
+      text-shadow: 0 0 15px rgba(247, 215, 148, 0.5);
+      margin-bottom: 40px;
+    }
+
+    /* Action Button */
+    .btn-container {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      z-index: 10;
+    }
+
+    .btn-glow {
+      background: rgba(138, 12, 33, 0.6);
+      color: #ffffff;
+      border: 1px solid #e61938;
+      padding: 12px 35px;
+      border-radius: 30px;
       font-size: 0.75rem;
       letter-spacing: 2px;
-      color: #d1a3a4;
-      margin: 15px 0 35px 0;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 25px rgba(230, 25, 56, 0.6), inset 0 0 10px rgba(230, 25, 56, 0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    .couple-silhouette {
-      width: 100%;
-      max-width: 450px;
-      height: 220px;
-      background: linear-gradient(0deg, #080203 10%, transparent 100%),
-                  radial-gradient(ellipse at bottom, rgba(255, 51, 102, 0.2) 0%, transparent 70%);
-      border-bottom: 2px solid rgba(255, 51, 102, 0.2);
-      margin-bottom: 30px;
+    .btn-glow:hover {
+      background: rgba(230, 25, 56, 0.8);
+      box-shadow: 0 0 35px rgba(230, 25, 56, 0.9);
+      transform: translateY(-2px);
+    }
+
+    /* Mouse Scroll Icon */
+    .scroll-indicator {
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #8a7b7c;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
     }
 
-    /* --- SECTION 2: LOVE LETTER --- */
-    #love-letter {
-      background: radial-gradient(circle at center, #180307 0%, #080203 100%);
-    }
-
-    .letter-paper {
-      background: #e1cfb4;
-      background-image: radial-gradient(#d3bd9e 1px, transparent 0);
-      background-size: 24px 24px;
-      color: #2b1a13;
-      width: 100%;
-      max-width: 500px;
-      padding: 50px 40px;
-      border-radius: 4px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), inset 0 0 80px rgba(110, 70, 30, 0.3);
-      border: 1px solid #c4ac89;
+    .mouse-icon {
+      width: 18px;
+      height: 28px;
+      border: 1px solid #8a7b7c;
+      border-radius: 12px;
       position: relative;
     }
 
-    .letter-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.8rem;
-      color: #8a1324;
-      margin-bottom: 20px;
+    .mouse-icon::before {
+      content: '';
+      width: 2px;
+      height: 5px;
+      background: #8a7b7c;
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    .letter-content {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      font-style: italic;
-      color: #3d2b22;
-      margin-bottom: 30px;
+    /* Bottom Curved White Section */
+    .curved-bottom {
+      width: 100%;
+      background: #fdfaf7;
+      color: #4a3b32;
+      padding: 60px 20px;
+      border-top-left-radius: 50% 40px;
+      border-top-right-radius: 50% 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .letter-signature {
-      font-family: 'Great Vibes', cursive;
+    .quote-icon {
+      color: #d8b775;
       font-size: 2rem;
-      color: #8a1324;
-      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #635349;
+      max-width: 450px;
+    }
+
+    .heart-small {
+      color: #e61938;
+      font-size: 0.8rem;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Header -->
+  <!-- Header Navigation -->
   <header>
-    <div class="logo">S &#9829; S</div>
+    <div class="logo">S <span>&#9829;</span> S</div>
     <nav>
       <a href="#landing">Our Story</a>
-      <a href="#love-letter">Memories</a>
+      <a href="#">Memories</a>
       <a href="#">Gallery</a>
       <a href="#">Surprises</a>
+      <a href="#">Future</a>
     </nav>
     <button class="music-btn" title="Toggle Music">&#9835;</button>
   </header>
 
-  <!-- Section 1: Landing Page -->
+  <!-- Hero Landing Section -->
   <section id="landing">
-    <div class="moon-container"></div>
+    <!-- Moon -->
+    <div class="moon"></div>
+
+    <!-- Title -->
     <h1 class="landing-title">
-      Every <span>love</span> story is beautiful...<br>
-      but ours is my <span>favorite.</span> &#9829;
+      Every <span class="highlight-red">love</span> story is beautiful...<br>
+      but ours is my <span class="cursive-title">favorite.</span> <span class="highlight-red">&#9825;</span>
     </h1>
-    
-    <div class="days-badge">
-      730 DAYS OF LOVE, LAUGHTER & MEMORIES
+
+    <div class="title-divider">&#9825;</div>
+
+    <!-- Days Counter -->
+    <div class="days-badge">730 DAYS OF LOVE, LAUGHTER & MEMORIES</div>
+
+    <!-- Gold Cursive Header -->
+    <div class="anniversary-text">Happy 2 Year Anniversary</div>
+
+    <!-- Begin Story Button -->
+    <div class="btn-container">
+      <a href="#quote-section" class="btn-glow">
+        BEGIN OUR STORY <span style="color:#ff3366;">&#9829;</span>
+      </a>
     </div>
 
-    <div class="couple-silhouette"></div>
-
-    <a href="#love-letter" class="btn-primary">
-      Begin Our Story &#9829;
-    </a>
-
-    <a href="#love-letter" class="scroll-hint">
-      &#9737;<br>
-      Scroll to Begin
-    </a>
-  </section>
-
-  <!-- Section 2: Love Letter -->
-  <section id="love-letter">
-    <div class="letter-paper">
-      <h2 class="letter-title">My Dearest Shruti, &#9829;</h2>
-      <div class="letter-content">
-        <p>Two years ago, life gave me the most beautiful blessing — you. Since then, every moment with you has been a story worth living.</p><br>
-        <p>You are my happiness, my calm, my crazy, my love, my best friend, my everything.</p><br>
-        <p>Thank you for being my person, for choosing me every single day, for turning ordinary days into the most extraordinary memories.</p><br>
-        <p>I can't wait to make a million more memories with you.</p>
-      </div>
-      <div class="letter-signature">
-        Forever yours,<br>
-        Subhash &#9829;
-      </div>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="mouse-icon"></div>
+      <div>SCROLL TO BEGIN</div>
+      <div style="color: #e61938; font-size: 0.5rem;">&#9829;</div>
     </div>
 
-    <a href="#" class="scroll-hint" style="margin-top: 30px; position: relative;">
-      &#9737;<br>
-      Scroll to Continue Our Story
-    </a>
+    <!-- Curved White Quote Area -->
+    <div id="quote-section" class="curved-bottom">
+      <div class="quote-icon">&#8220;&#8220;</div>
+      <p class="quote-text">
+        Two souls. One heart.<br>
+        Countless memories. One forever.
+      </p>
+      <div class="heart-small">&#9825;</div>
+    </div>
   </section>
 
 </body>
