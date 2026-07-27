@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S & S - Our Story</title>
+  <!-- Romantic Fonts from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Global Reset & Base Theme */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      background-color: #080203;
+      color: #fce8e8;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Fixed Navigation Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      z-index: 100;
+      background: linear-gradient(180deg, rgba(10, 2, 4, 0.9) 0%, rgba(10, 2, 4, 0) 100%);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ff3366;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #d1b8b8;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3366;
+    }
+
+    .music-btn {
+      background: rgba(255, 51, 102, 0.15);
+      border: 1px solid rgba(255, 51, 102, 0.4);
+      color: #ff3366;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .music-btn:hover {
+      background: #ff3366;
+      color: #fff;
+      box-shadow: 0 0 12px rgba(255, 51, 102, 0.6);
+    }
+
+    /* Common Section Styles */
+    section {
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Styling Buttons */
+    .btn-primary {
+      background: linear-gradient(45deg, #a80f2d, #ff3366);
+      color: #ffffff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 51, 102, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(255, 51, 102, 0.7);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #a88;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
+
+    /* --- SECTION 1: LANDING PAGE --- */
+    #landing {
+      background: radial-gradient(circle at top, #1e050b 0%, #080203 70%);
+      text-align: center;
+    }
+
+    .moon-container {
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #fffdfa 40%, #edd8a4 70%, rgba(237, 216, 164, 0) 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 50px rgba(255, 235, 180, 0.5);
+      margin-bottom: 25px;
+    }
+
+    .landing-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .landing-title span {
+      font-family: 'Great Vibes', cursive;
+      color: #ff3366;
+      font-size: 3rem;
+    }
+
+    .days-badge {
+      border-top: 1px solid rgba(255, 51, 102, 0.3);
+      border-bottom: 1px solid rgba(255, 51, 102, 0.3);
+      padding: 6px 16px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: #d1a3a4;
+      margin: 15px 0 35px 0;
+    }
+
+    .couple-silhouette {
+      width: 100%;
+      max-width: 450px;
+      height: 220px;
+      background: linear-gradient(0deg, #080203 10%, transparent 100%),
+                  radial-gradient(ellipse at bottom, rgba(255, 51, 102, 0.2) 0%, transparent 70%);
+      border-bottom: 2px solid rgba(255, 51, 102, 0.2);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    /* --- SECTION 2: LOVE LETTER --- */
+    #love-letter {
+      background: radial-gradient(circle at center, #180307 0%, #080203 100%);
+    }
+
+    .letter-paper {
+      background: #e1cfb4;
+      background-image: radial-gradient(#d3bd9e 1px, transparent 0);
+      background-size: 24px 24px;
+      color: #2b1a13;
+      width: 100%;
+      max-width: 500px;
+      padding: 50px 40px;
+      border-radius: 4px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), inset 0 0 80px rgba(110, 70, 30, 0.3);
+      border: 1px solid #c4ac89;
+      position: relative;
+    }
+
+    .letter-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8rem;
+      color: #8a1324;
+      margin-bottom: 20px;
+    }
+
+    .letter-content {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      font-style: italic;
+      color: #3d2b22;
+      margin-bottom: 30px;
+    }
+
+    .letter-signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #8a1324;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="logo">S &#9829; S</div>
+    <nav>
+      <a href="#landing">Our Story</a>
+      <a href="#love-letter">Memories</a>
+      <a href="#">Gallery</a>
+      <a href="#">Surprises</a>
+    </nav>
+    <button class="music-btn" title="Toggle Music">&#9835;</button>
+  </header>
+
+  <!-- Section 1: Landing Page -->
+  <section id="landing">
+    <div class="moon-container"></div>
+    <h1 class="landing-title">
+      Every <span>love</span> story is beautiful...<br>
+      but ours is my <span>favorite.</span> &#9829;
+    </h1>
+    
+    <div class="days-badge">
+      730 DAYS OF LOVE, LAUGHTER & MEMORIES
+    </div>
+
+    <div class="couple-silhouette"></div>
+
+    <a href="#love-letter" class="btn-primary">
+      Begin Our Story &#9829;
+    </a>
+
+    <a href="#love-letter" class="scroll-hint">
+      &#9737;<br>
+      Scroll to Begin
+    </a>
+  </section>
+
+  <!-- Section 2: Love Letter -->
+  <section id="love-letter">
+    <div class="letter-paper">
+      <h2 class="letter-title">My Dearest Shruti, &#9829;</h2>
+      <div class="letter-content">
+        <p>Two years ago, life gave me the most beautiful blessing — you. Since then, every moment with you has been a story worth living.</p><br>
+        <p>You are my happiness, my calm, my crazy, my love, my best friend, my everything.</p><br>
+        <p>Thank you for being my person, for choosing me every single day, for turning ordinary days into the most extraordinary memories.</p><br>
+        <p>I can't wait to make a million more memories with you.</p>
+      </div>
+      <div class="letter-signature">
+        Forever yours,<br>
+        Subhash &#9829;
+      </div>
+    </div>
+
+    <a href="#" class="scroll-hint" style="margin-top: 30px; position: relative;">
+      &#9737;<br>
+      Scroll to Continue Our Story
+    </a>
+  </section>
+
+</body>
+</html>
